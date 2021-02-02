@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Landing Page</title>
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#" ><img class="logo" src="landingpage.png" alt=""></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just a coffee <br>
+                It's
+            <span>Starbucks</span></h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, aut perspiciatis, qui blanditiis iure maiores nam laboriosam id illo nulla optio reiciendis aliquam ratione esse. Adipisci rerum dignissimos ipsum corrupti?</p>
+            <a href="#">Learn More</a>
+                </div>
+            <div class="imgBox">
+                <img class="starbucks" src="milk1.png" alt="">
+            </div>
+        </div>
+        <ul class="milk">
+           <li><img src="milk1.png" onclick="imgSlider('milk1.png');changeCircleColor('#017143')" alt=""width="100px" height="100px"></li>
+           <li><img src="milk2.png" onclick="imgSlider('milk2.png');changeCircleColor('#eb7495')" alt=""width="100px" height="100px"></li>
+           <li><img src="milk3.png" onclick="imgSlider('milk3.png');changeCircleColor('#81ecec')" alt=""width="100px" height="100px"></li> 
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="facebook.png" alt="" width="100px" height="100px"></a></li>
+            <li><a href="#"><img src="instagram.png" alt="" width="100px" height="100px"></a></li>
+            <li><a href="#"><img src="twitter.png" alt="" width="100px" height="100px"></a></li>
+        </ul>
+    </section>
+   <script type="text/javascript">
+    function imgSlider(anything){
+        document.querySelector(".starbucks").src = anything;
+    }
+    function changeCircleColor(color){
+       const circle = document.querySelector(".circle");
+       circle.style.background = color;
+    }
+    function toggleMenu(){
+        var menuToggle= document.querySelector(".toggle");
+        var navigation = document.querySelector('.navigation')
+        menuToggle.classList.toggle('active')
+        navigation.classList.toggle('active')
+    }
+    </script>
+</body>
+</html>
